@@ -1,0 +1,43 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+# Apply to all files without commiting:
+#   pre-commit run --all-files
+# Update this file:
+#   pre-commit autoupdate
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.2.0
+  hooks:
+    # See https://pre-commit.com/hooks.html for more hooks
+    - id: check-added-large-files
+    - id: check-ast
+    - id: check-case-conflict
+    - id: check-docstring-first
+    - id: check-executables-have-shebangs
+    - id: check-json
+    - id: check-merge-conflict
+    - id: check-yaml
+    - id: debug-statements
+    - id: end-of-file-fixer
+    - id: fix-byte-order-marker
+    - id: mixed-line-ending
+- repo: https://github.com/codespell-project/codespell
+  rev: v2.1.0
+  hooks:
+    - id: codespell
+      args: [ "-L", "bloc" ]
+- repo: https://github.com/Cretezy/flutter-format-pre-commit
+  rev: "4a1df675bb74dea371c17934933e257e46f8dd98"
+  hooks:
+    - id: flutter-format
+- repo: https://github.com/dluksza/flutter-analyze-pre-commit
+  rev: "0bfdb7415bb2d02794a884bf2b763a92772001eb"
+  hooks:
+    - id: flutter-analyze
+- repo: local
+  hooks:
+    - id: flutter-test
+      name: Run Flutter Tests
+      entry: flutter test .
+      pass_filenames: false
+      language: system

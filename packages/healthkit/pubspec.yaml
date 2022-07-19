@@ -1,0 +1,18 @@
+name: healthkit
+description: Utility methods for Apple HealthKit interactions
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=2.16.0"
+
+dependencies:
+  app_repository:
+    path: ../../packages/app_repository
+  health_kit_reporter: ^2.0.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  test: ^1.16.4
+  very_good_analysis: ^2.4.0

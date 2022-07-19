@@ -1,0 +1,33 @@
+name: app_repository
+description: Dart package which manages everything else for the app besides auth and search.
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=2.16.0"
+  flutter: ">=1.17.0"
+
+dependencies:
+  cache:
+    path: ../cache
+  constants:
+    path: ../constants
+  equatable: ^2.0.3
+  famnom_api:
+    path: ../famnom_api
+  flutter:
+    sdk: flutter
+  intl: ^0.17.0
+  json_annotation: ^4.5.0
+  very_good_analysis: ^2.4.0
+
+dev_dependencies:
+  build_runner: ^2.1.10
+  coverage: ^1.0.3
+  environments:
+    path: ../environments
+  flutter_test:
+    sdk: flutter
+  json_serializable: ^6.0.0
+  mocktail: ^0.3.0
+  test: ^1.16.4

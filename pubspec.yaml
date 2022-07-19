@@ -1,0 +1,65 @@
+name: famnom_flutter
+description: Nutrition tracker and meal planner.
+version: 1.0.0+2
+publish_to: none
+
+environment:
+  sdk: ">=2.16.0"
+
+dependencies:
+  app_repository:
+    path: packages/app_repository
+  auth_repository:
+    path: packages/auth_repository
+  bloc: ^8.0.3
+  charts_flutter: ^0.12.0
+  code_scan: ^0.4.0
+  dropdown_search: ^5.0.2
+  equatable: ^2.0.3
+  flow_builder: ^0.0.6
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.0.1
+  flutter_dotenv: ^5.0.2
+  font_awesome_flutter: ^10.1.0
+  form_inputs:
+    path: packages/form_inputs
+  formz: ^0.4.0
+  google_fonts: ^3.0.1
+  healthkit:
+    path: packages/healthkit
+  meta: ^1.3.0
+  multi_select_flutter: ^4.1.2
+  search_repository:
+    path: packages/search_repository
+  url_launcher: ^6.1.3
+  utils:
+    path: packages/utils
+  very_good_analysis: ^2.4.0
+
+dev_dependencies:
+  bloc_test: ^9.0.3
+  environments:
+    path: packages/environments
+  flutter_launcher_icons: ^0.9.2
+  flutter_native_splash: ^2.1.3+1
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_logo.png"
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: "assets/app_logo.png"
+  android_12:
+    image: "assets/app_logo_960.png"
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
+    - google_fonts/
